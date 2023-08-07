@@ -1,3 +1,5 @@
+"run code with california.py, it takes about 3 minutes"
+
 import os
 import openai
 import random
@@ -150,7 +152,7 @@ def main():
     score = 0
     runs = 0
 
-    for run_num in range(3):
+    for run_num in range(100):
         [score, runs] = run_lyric_matcher(score, runs)
 
     
