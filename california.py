@@ -1,7 +1,9 @@
+import os
 import openai
 import random
 
-openai.api_key = "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"
+"bash: export openai_key=[KEY]"
+openai.api_key = os.environ.get('openai_key')
 
 lyrics = """
 Greetings loved ones
@@ -148,7 +150,7 @@ def main():
     score = 0
     runs = 0
 
-    for run_num in range(100):
+    for run_num in range(3):
         [score, runs] = run_lyric_matcher(score, runs)
 
     
